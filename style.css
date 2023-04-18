@@ -1,0 +1,277 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+    background-color: black;
+    background-image: url('./img1.png');
+    background-repeat: no-repeat;
+    background-size: 50%;
+    overflow: hidden;
+    overflow-y: scroll;
+}
+
+
+body::-webkit-scrollbar {
+    width: 0;
+}
+
+.fade-in {
+    opacity: 0;
+    animation: fadeIn 2s ease-in-out forwards;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+.topinfo {
+    position: relative;
+    left: 50%;
+    height: 50px;
+}
+
+.topinfo>h1 {
+    position: relative;
+    left: -10px;
+    font-size: 87px;
+}
+
+.topinfo>h2 {
+    position: relative;
+    top: -70px;
+}
+
+.infobody1 {
+    position: relative;
+    left: 50%;
+    top: 120px;
+    width: 850px;
+}
+
+.midinfo1 {
+    position: absolute;
+    top: 690px;
+    font-size: 57.5px;
+}
+
+.midinfo2 {
+    position: absolute;
+    top: 950px;
+    font-size: 15px;
+}
+
+.zindex {
+    top: 5px;
+    position: fixed;
+}
+
+.midinfoh1 {
+    opacity: 0;
+    transition: all 1s;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+.midinfoh2 {
+    position: absolute;
+    left: 35px;
+    width: 1250px;
+    height: 250px;
+}
+
+.midinfoh2 {
+    opacity: 0;
+    transition: all 1s;
+}
+
+.midinfoh3 {
+    position: absolute;
+    left: 35px;
+    width: 1250px;
+    height: 250px;
+    left: 45px;
+}
+
+.vacimg {
+    position: absolute;
+    top: 1375px;
+    left: 70%;
+    background-image: url("./tubes.jpg");
+    width: 500px;
+    height: 400px;
+}
+
+.vactext {
+    position: absolute;
+    top: 1425px;
+    left: 45px;
+    width: 1300px;
+    height: 400px;
+    font-size: 28px;
+}
+
+.simplehow {
+    position: absolute;
+    top: 1925px;
+    left: 45px;
+    width: 1780px;
+    height: 400px;
+    font-size: 38px;
+    text-align: center;
+    margin: auto;
+}
+
+.simplehow2 {
+    position: absolute;
+    top: 2625px;
+    left: 45px;
+    width: 1780px;
+    height: 400px;
+    font-size: 38px;
+    text-align: center;
+    margin: auto;
+}
+
+.midinfoh2 {
+    opacity: 0;
+    transition: all 1s;
+}
+
+.infobody1>p {
+    font-size: 20px;
+}
+
+.positives {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 1050px;
+}
+
+.positives div {
+    font-size: 25px;
+    margin-right: 10px;
+    padding: 50px;
+}
+
+.negatives {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 150px;
+}
+
+.negatives div {
+    font-size: 25px;
+    margin-right: 10px;
+    padding: 50px;
+}
+
+.reasonsbullets {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 550px;
+}
+
+.reasonsbullets div {
+    font-size: 25px;
+    margin-right: 10px;
+    padding: 50px;
+}
+
+
+
+
+.centered {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 20vh;
+  }
+  
+  .centered p {
+    text-align: center;
+  }
+
+
+.nav {
+    position: fixed;
+    top: 15px;
+    right: 15px;
+    bottom: 15px;
+    width: 10px;
+    background-color: transparent;
+    z-index: 9999;
+}
+
+.line {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    width: 1px;
+    background-color: #ffffff;
+}
+
+.dot {
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: #f0f0f0;
+    top: calc(15px + (100% - 30px) * var(--scroll));
+    right: -4px;
+    transition: top 0.2s ease-in-out;
+}
+
+.container {
+    position: fixed;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.arrow {
+    rotate: 180deg;
+    width: 0;
+    height: 0;
+    border-left: 20px solid transparent;
+    border-right: 20px solid transparent;
+    border-bottom: 30px solid #fff;
+    transform: translateY(0);
+    animation: bounce 1s infinite;
+    transition-timing-function: cubic-bezier(.17, .67, .83, .67);
+    transition: all 2s;
+    opacity: 0;
+}
+
+.show {
+    opacity: 1;
+}
+
+@keyframes bounce {
+
+    0%,
+    20%,
+    50%,
+    80%,
+    100% {
+        transform: translateY(0);
+    }
+
+    40% {
+        transform: translateY(15px);
+    }
+
+    60% {
+        transform: translateY(10px);
+    }
+}
